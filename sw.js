@@ -1,7 +1,5 @@
 var cacheName = 'pc';
 var filesToCache = [
-  './',
-  './index.html',
   './manifest.json',
   './css/style.css',
   './favicon.ico',
@@ -24,6 +22,13 @@ self.addEventListener('fetch', function(e) {
     caches.match(e.request).then(function(response) {
       console.log(e.request)
       if (response) { return response; }
+      
+      var r_url = e.request.url; 
+      if (r_url == '/' || r_url == './index.html' || r_url == 'index.html') {
+        console.log(888)
+      }
+
+
       return fetch(e.request);
     })
   );
