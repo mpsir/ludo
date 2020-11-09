@@ -29,7 +29,9 @@ self.addEventListener('fetch', function (e) {
         r_url == './index.html' ||
         r_url == 'index.html'
       ) {
-        console.log(888)
+        return new Response("<h1>Hello!</h1>", {
+          headers: {'Content-Type': 'text/html'}
+        })
       }
 
 
