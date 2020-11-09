@@ -32,7 +32,7 @@
       window.addEventListener('load', function () {
         navigator.serviceWorker.register('./sw.js')
           .then(function (registration) {
-            location.reload(); 
+            //location.reload(); 
           }, function (err) {
             console.log('ServiceWorker registration failed: ', err);
           });
