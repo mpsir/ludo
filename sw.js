@@ -25,7 +25,9 @@ self.addEventListener('fetch', function (e) {
   console.log('url is : ' + e.request.url)
   e.respondWith(
     caches.match(e.request).then(function (response) {
-      //console.log(e.request.url)
+      console.log(no)
+      no++
+      console.log(no)
       if (response) { return response; }
 
       var r_url = e.request.url;
@@ -86,7 +88,7 @@ self.addEventListener('fetch', function (e) {
         })
       }
 
-no++
+
       return fetch(e.request);
     })
   );
