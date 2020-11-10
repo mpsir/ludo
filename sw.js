@@ -1,3 +1,6 @@
+//var this_url = 'http://localhost:8080'
+var this_url = 'https://mpsir.github.io/ludo'
+
 var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
@@ -5,7 +8,8 @@ var filesToCache = [
   './favicon.ico',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
-  './js/main.js'
+  './js/main.js',
+  './sw.js'
 ];
 
 self.addEventListener('install', function (e) {
@@ -18,7 +22,7 @@ self.addEventListener('install', function (e) {
 
 
 self.addEventListener('fetch', function (e) {
-  console.log(e.request.url)
+  console.log('url is : ' + e.request.url)
   e.respondWith(
     caches.match(e.request).then(function (response) {
       //console.log(e.request.url)
@@ -26,9 +30,8 @@ self.addEventListener('fetch', function (e) {
 
       var r_url = e.request.url;
       if (
-        r_url == '/' ||
-        r_url == './index.html' ||
-        r_url == 'index.html' 
+        r_url == this_url + '/index.html' ||
+        r_url == this_url + '/' 
       ) {
         return new Response("<h1>Hello!</h1>", {
           headers: {'Content-Type': 'text/html'}
