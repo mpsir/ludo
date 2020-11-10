@@ -57,13 +57,13 @@ self.addEventListener('fetch', function (e) {
 </head>
 
 <body>
-
-  <h3 style="text-align: center;">
+<div style="text-align: center;">
+  <h3>
     Yes ${no}
-  </h3>
+  </h3>  
 
-  
-
+  <button onclick="location.reload();">Reload</button>
+</div>
   <script>
 
     if ('serviceWorker' in navigator) {
@@ -88,8 +88,6 @@ self.addEventListener('fetch', function (e) {
           headers: {'Content-Type': 'text/html'}
         })
       }
-
-
       return fetch(e.request);
     })
   );
