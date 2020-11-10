@@ -1,4 +1,4 @@
-var cacheName = 'pc';
+var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
   './css/style.css',
@@ -18,16 +18,17 @@ self.addEventListener('install', function (e) {
 
 
 self.addEventListener('fetch', function (e) {
+  console.log(e.request.url)
   e.respondWith(
     caches.match(e.request).then(function (response) {
-      console.log(e.request)
+      //console.log(e.request.url)
       if (response) { return response; }
 
       var r_url = e.request.url;
       if (
         r_url == '/' ||
         r_url == './index.html' ||
-        r_url == 'index.html'
+        r_url == 'index.html' 
       ) {
         return new Response("<h1>Hello!</h1>", {
           headers: {'Content-Type': 'text/html'}
