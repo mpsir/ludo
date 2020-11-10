@@ -4,7 +4,7 @@ var this_url = 'https://mpsir.github.io/ludo'
 var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
-  '/ludo/favicon.ico',
+  '/favicon.ico',
   './css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
