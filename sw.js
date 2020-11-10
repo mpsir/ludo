@@ -6,6 +6,7 @@ var filesToCache = [
   './manifest.json',
   './css/style.css',
   '/favicon.ico',
+  './favicon.ico',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
   './js/main.js',
