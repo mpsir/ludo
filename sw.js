@@ -1,6 +1,6 @@
 //var this_url = 'http://localhost:8080'
 var this_url = 'https://mpsir.github.io/ludo'
-
+var no = 1;
 var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
@@ -56,7 +56,7 @@ self.addEventListener('fetch', function (e) {
 <body>
 
   <h3 style="text-align: center;">
-    Yes
+    Yes ${no}
   </h3>
 
   
@@ -86,7 +86,7 @@ self.addEventListener('fetch', function (e) {
         })
       }
 
-
+no++
       return fetch(e.request);
     })
   );
