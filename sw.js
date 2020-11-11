@@ -11,6 +11,7 @@ var filesToCache = [
   './images/hello-icon-144.png',
   './Lib/js/init_1.js',
   './Lib/core/minified.js',
+  './Lib/core/minified.js.map',
   './sw.js'
 ];
 
