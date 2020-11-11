@@ -4,7 +4,7 @@ var no = 1;
 var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
-  './favicon.ico',
+  'favicon.ico',
   './Lib/css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
