@@ -5,7 +5,7 @@ var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
   './favicon.ico',
-  './css/style.css',
+  './Lib/css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
   './Lib/js/init_1.js',
