@@ -4,7 +4,8 @@ var no = 1;
 var cacheName = 'ludo';
 var filesToCache = [
   './manifest.json',
-  'https://mpsir.github.io/ludo/favicon.ico',
+  './favicon.ico',
+  'fav.ico',
   './Lib/css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
@@ -46,7 +47,7 @@ self.addEventListener('fetch', function (e) {
   <meta charset="utf-8">
   <title>Ludo</title>
   <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="./favicon.ico" type="image/x-icon" />
+  <link rel="icon" href="fav.ico" type="image/x-icon" />
   <link rel="apple-touch-icon" href="images/hello-icon-152.png">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="white" />
