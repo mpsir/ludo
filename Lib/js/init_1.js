@@ -1,6 +1,6 @@
 function check_pre_req(){
     if ('serviceWorker' in navigator) {
-      
+      reg_sw()
     } else { error_in_pre_req() }
   }
 
