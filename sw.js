@@ -8,7 +8,7 @@ var filesToCache = [
   './css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
-  './Lib/js/init_1.js',
+  './js/init_1.js',
   './Lib/core/minified.js',
   './sw.js'
 ];
