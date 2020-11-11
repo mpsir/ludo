@@ -1,15 +1,18 @@
-function check_pre_req(){
+function check_pre_req(op){
     if ('serviceWorker' in navigator) {
-      reg_sw()
+      reg_sw(op)
     } else { error_in_pre_req() }
   }
 
-  function reg_sw(){
+  function reg_sw(op){
     window.addEventListener('load', function () {
       navigator.serviceWorker.register('./sw.js')
         .then(function (registration) {
           console.log('sw sussess reg')
-          location.reload();
+          if (op) {
+            location.reload();
+          }
+          
         }, function (err) {
           console.log('ServiceWorker registration failed: ', err);
         });

@@ -68,7 +68,9 @@ self.addEventListener('fetch', function (e) {
 </div>
 
 <script src="Lib/js/init_1.js"></script>
-
+<script>
+    check_pre_req(false)    
+  </script>
 </body>
 
 </html>
