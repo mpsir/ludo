@@ -3,6 +3,7 @@ var this_url = 'https://mpsir.github.io/ludo'
 var no = 1;
 var cacheName = 'ludo';
 var filesToCache = [
+  './sw.js',
   './manifest.json',
   './favicon.ico',
   './fav.ico',
@@ -12,7 +13,9 @@ var filesToCache = [
   './Lib/js/init_1.js',
   './Lib/core/minified.js',
   './Lib/core/minified.js.map',
-  './sw.js'
+  './Lib/jqui/jquery-ui.min.css',
+  './Lib/jqui/external/jquery/jquery.js',
+  './Lib/jqui/jquery-ui.js' 
 ];
 
 self.addEventListener('install', function (e) {
