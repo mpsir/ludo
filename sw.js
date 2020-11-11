@@ -15,7 +15,11 @@ var filesToCache = [
   './Lib/core/minified.js.map',
   './Lib/jqui/jquery-ui.min.css',
   './Lib/jqui/external/jquery/jquery.js',
-  './Lib/jqui/jquery-ui.js' 
+  './Lib/jqui/jquery-ui.js',
+  './Lib/bs4/bootstrap-4.5.3-dist/css/bootstrap.min.css',
+  './Lib/bs4/bootstrap-4.5.3-dist/js/bootstrap.min.js',
+  './Lib/w3.css',
+  './Lib/vue.js'
 ];
 
 self.addEventListener('install', function (e) {
