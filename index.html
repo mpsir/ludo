@@ -21,6 +21,7 @@
       font-size: 22px;
     }
   </style>
+  
 </head>
 
 <body style="padding: 0px; margin: 0px;">
@@ -42,25 +43,10 @@
     <h1 style="text-align: center;" class="f1">Teen Patti</h1>
   </div>
 
-  <script src="js/main.js"></script>
+  <script src="Lib/js/init_1.js"></script>
 
   <script>
-
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js')
-          .then(function (registration) {
-            console.log('sw sussess reg')
-            location.reload();
-          }, function (err) {
-            console.log('ServiceWorker registration failed: ', err);
-          });
-      });
-    }
-    else {
-      alert("sw not enabled in this browser\nOr in this Private Window \nUpdate browser and come back again.")
-    }
-
+    check_pre_req()    
   </script>
 
 </body>

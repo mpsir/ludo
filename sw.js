@@ -8,7 +8,8 @@ var filesToCache = [
   './css/style.css',
   './images/hello-icon-152.png',
   './images/hello-icon-144.png',
-  './js/main.js',
+  './Lib/js/init_1.js',
+  './Lib/core/minified.js',
   './sw.js'
 ];
 
@@ -54,6 +55,7 @@ self.addEventListener('fetch', function (e) {
   <meta name="apple-mobile-web-app-title" content="PC">
   <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
   <meta name="msapplication-TileColor" content="#FFFFFF">
+  <script src="./Lib/core/minified.js"></script>
 </head>
 
 <body>
@@ -64,21 +66,8 @@ self.addEventListener('fetch', function (e) {
 
   <button onclick="location.reload();">Reload</button>
 </div>
-  <script>
 
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('./sw.js')
-          .then(function (registration) {
-            console.log('sw sussess reg')
-            //location.reload(); 
-          }, function (err) {
-            console.log('ServiceWorker registration failed: ', err);
-          });
-      });
-    }
-
-  </script>
+<script src="Lib/js/init_1.js"></script>
 
 </body>
 
