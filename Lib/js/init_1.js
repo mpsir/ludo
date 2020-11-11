@@ -9,10 +9,7 @@ function check_pre_req(op){
       navigator.serviceWorker.register('./sw.js')
         .then(function (registration) {
           console.log('sw sussess reg')
-          if (op) {
-            location.reload();
-          }
-          
+          if (op) { location.reload(); }          
         }, function (err) {
           console.log('ServiceWorker registration failed: ', err);
         });
