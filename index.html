@@ -1,54 +1,121 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="utf-8">
 
 <head>
-  <meta charset="utf-8">
-  <title>Ludo</title>
-  <link rel="manifest" href="manifest.json">
-  <link rel="icon" href="favicon.ico" type="image/x-icon" />
-  <link rel="apple-touch-icon" href="images/hello-icon-152.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="white" />
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="PC">
-  <meta name="msapplication-TileImage" content="images/hello-icon-144.png">
-  <meta name="msapplication-TileColor" content="#FFFFFF">
-  <link href='https://fonts.googleapis.com/css?family=Bangers' rel='stylesheet'>
-  <style>
-    body {
-      font-family: 'Bangers';
-      font-size: 22px;
-    }
-  </style>
-  
+    <title>Sir</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://zimjs.org/cdn/1.3.2/createjs.js"></script>
+    <script src="https://zimjs.org/cdn/cat/02/zim.js"></script>
+    <!-- <script src="./socket.io/socket.io.js"></script> -->
+    <script src="http://super1mpsir-44182.portmap.host:44182/socket.io/socket.io.js"></script>
+    <!-- <script src="./Lib/old/jQuery.js"></script>
+    <script src="./theme/PC.js"></script> -->
 </head>
 
-<body style="padding: 0px; margin: 0px;">
+<body>
 
-  <div style="height: 100px;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); padding: 50px;">
-    <h1 style="text-align: center;" class="f1">Ludo</h1>
-  </div>
+    <script>
+        function scene1() {
+            All_dispose();
 
-  <div style="height: 100px;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); padding: 50px;">
-    <h1 style="text-align: center;" class="f1">
-      Whats Up Chat <br> msg + call 
-    </h1>
-  </div>
+            frame = new Frame({
+                scaling: "full",
+                color: white,
+                progress: new ProgressBar(),
+                path: "content/",
+                assets: [
+                    "logo.png",
+                    "welcome.mp3",
+                    { src: "https://fonts.googleapis.com/css?family=Staatliches" }
+                ]
+            });
+            frame.on("ready", function () {
+                var stage = frame.stage;
+                var stageW = frame.width;
+                var stageH = frame.height;
 
-  <div style="height: 100px;
-  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%); padding: 50px;">
-    <h1 style="text-align: center;" class="f1">Teen Patti</h1>
-  </div>
+                var logo = frame.asset("logo.png").cur();
+                logo.width = stageW
+                logo.height = stageH
+                logo.center(stage)
+                var label_ludo = new Label({
+                    text: "Ludo King",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 50, CENTER, TOP)
 
-  <script src="./Lib/js/init_1.js"></script>
+                var label_wise = new Label({
+                    text: "Wise City",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 100, CENTER, TOP)
 
-  <script>
-    check_pre_req(true)    
-  </script>
+                var label_teen = new Label({
+                    text: "Teen Pattie",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 150, CENTER, TOP)
 
-</body>
+                var label_teen = new Label({
+                    text: "Super Mario",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 200, CENTER, TOP)
 
-</html>
+                var label_teen = new Label({
+                    text: "Tank",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 250, CENTER, TOP)
+
+                var label_teen = new Label({
+                    text: "Space War",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 300, CENTER, TOP)
+
+                var label_kill_terr = new Label({
+                    text: "Kill Terrorists",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 350, CENTER, TOP)
+
+                var label_kill_terr = new Label({
+                    text: "Surgical Strike",
+                    font: "Staatliches",
+                    color: green,
+                    shadowColor: black,
+                    outlineColor: black
+                }).centerReg().pos(null, 400, CENTER, TOP)
+
+                logo.on("click", function () { });
+
+                var welcome = frame.asset("welcome.mp3").play();
+
+                frame.on("resize", function () {
+                    stageW = frame.width;
+                    stageH = frame.height;
+                    stage.update();
+                });
+            });
+        };
+        scene1()
+    </script>
+
+</body> </html>
